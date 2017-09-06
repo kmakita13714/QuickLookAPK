@@ -190,7 +190,7 @@ NSString *androidPackageHTMLPreview(HZAndroidPackage *package)
 {
     NSMutableString *stringBuilder = [NSMutableString string];
 
-    [stringBuilder appendString:@"<html><body style='font-family:sans-serif'>"];
+    [stringBuilder appendString:@"<html><head><meta charset=\"UTF-8\" /></head><body style='font-family:sans-serif'>"];
     NSString *iconBase64 = [package.iconData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     [stringBuilder appendFormat:@"<img style='width: 100px; height: 100px' title='%@' src='data:image/png;base64,%@'>", package.label, iconBase64];
     [stringBuilder appendFormat:@"<h1>%@</h1>", package.label];
